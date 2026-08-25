@@ -1,0 +1,873 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1771468693483614}
+  m_IsPrefabParent: 1
+--- !u!1 &1184308459957706
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4512903403589422}
+  - component: {fileID: 33845126116436629}
+  - component: {fileID: 23010048127759896}
+  - component: {fileID: 114714034880185946}
+  - component: {fileID: 114549840723589642}
+  m_Layer: 9
+  m_Name: Crabby
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1520621855824600
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4478664353003225}
+  - component: {fileID: 114017391466700598}
+  - component: {fileID: 33996479916494934}
+  - component: {fileID: 23182769605571119}
+  - component: {fileID: 114598954159839329}
+  m_Layer: 0
+  m_Name: Claw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1586221449802760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4133480033514652}
+  - component: {fileID: 33492158967331555}
+  - component: {fileID: 23427287179504415}
+  - component: {fileID: 114767212647468565}
+  m_Layer: 0
+  m_Name: Ship
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1771468693483614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4060930801820035}
+  - component: {fileID: 114593132600336732}
+  - component: {fileID: 114905493283826817}
+  - component: {fileID: 82112903389404311}
+  m_Layer: 0
+  m_Name: EncounterOne
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4060930801820035
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1771468693483614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4133480033514652}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4133480033514652
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1586221449802760}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4478664353003225}
+  - {fileID: 4512903403589422}
+  m_Father: {fileID: 4060930801820035}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4478664353003225
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1520621855824600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4133480033514652}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4512903403589422
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184308459957706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4133480033514652}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23010048127759896
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184308459957706}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 28e3303cdeec5c14eb71e49b0b088ab4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!23 &23182769605571119
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1520621855824600}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 28e3303cdeec5c14eb71e49b0b088ab4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!23 &23427287179504415
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1586221449802760}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 28e3303cdeec5c14eb71e49b0b088ab4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33492158967331555
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1586221449802760}
+  m_Mesh: {fileID: 0}
+--- !u!33 &33845126116436629
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184308459957706}
+  m_Mesh: {fileID: 0}
+--- !u!33 &33996479916494934
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1520621855824600}
+  m_Mesh: {fileID: 0}
+--- !u!82 &82112903389404311
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1771468693483614}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e0fb425fe5a8df047963e12bd9fcda87, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &114017391466700598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1520621855824600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07ce3d46c7c4484cb569c9d44d4e8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayOnStart: 0
+  Looping: 0
+  keyframeOffsetInPixels: 1
+  keyframeOffsetInWorldSpace: 1
+  keyframes:
+  - frame: 0
+    offset: {x: 0, y: 0, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 100
+    offset: {x: 0, y: 0, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 105
+    offset: {x: 0, y: 0, z: 0}
+    angle: -30
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 110
+    offset: {x: 0, y: 0, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 115
+    offset: {x: 0, y: 0, z: 0}
+    angle: 30
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 120
+    offset: {x: 0, y: 0, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 124
+    offset: {x: 0, y: 0, z: 0}
+    angle: -10
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 127
+    offset: {x: 0, y: 0, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 140
+    offset: {x: 0, y: 67, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  EaseInEaseOut: 0
+  AffectX: 1
+  AffectY: 1
+  AffectZ: 1
+  AffectOrientation: 1
+--- !u!114 &114549840723589642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184308459957706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e87662aebcbfd234ab5769b82b50a28e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reachingIdle: 0
+--- !u!114 &114593132600336732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1771468693483614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e1c05cba88bdf45a83aebcb0103c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fakeGiantPuffleO: {fileID: 4460031303568202, guid: 876861265737ca340b53b025ac041afb,
+    type: 2}
+  extendClawSound: {fileID: 8300000, guid: ec7f00da5a71b8c4782ab22ff4e43858, type: 3}
+  retractClawSound: {fileID: 8300000, guid: 02358ef9598cb7140bf10135dba6d489, type: 3}
+--- !u!114 &114598954159839329
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1520621855824600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc35bab39cb2914780ae18659fefbb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultAnimation: 0
+  defaultOnStart: 1
+  manager: {fileID: 0}
+  animations:
+  - name: CutsceneClaw
+    stream: 
+    framerate: 0
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/CutsceneClaw/CutsceneClaw_texture_01
+      urls:
+      - CutsceneClaw_texture_01
+      stride: {x: 94, y: 120}
+      offset: {x: -37, y: -129}
+      cols: 3
+      rows: 1
+      total: 2
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  sharedMaterial: 0
+  zoomInvariant: 0
+--- !u!114 &114714034880185946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184308459957706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc35bab39cb2914780ae18659fefbb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultAnimation: 2
+  defaultOnStart: 1
+  manager: {fileID: 0}
+  animations:
+  - name: Reaching_ArmR
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Reaching/Reaching_ArmR/ArmR_Texture_01
+      urls:
+      - ArmR_texture_01
+      stride: {x: 81, y: 53}
+      offset: {x: -38, y: 4}
+      cols: 12
+      rows: 2
+      total: 13
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Reaching_ArmL
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Reaching/Reaching_ArmL/ArmL_Texture_01
+      urls:
+      - ArmL_texture_01
+      stride: {x: 81, y: 55}
+      offset: {x: -37, y: 2}
+      cols: 12
+      rows: 1
+      total: 7
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Reaching_Idle
+    stream: 
+    framerate: 24
+    looping: 1
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Reaching/Reaching_Idle/Still_texture_01
+      urls:
+      - Still_texture_01
+      stride: {x: 80, y: 53}
+      offset: {x: -37, y: 4}
+      cols: 3
+      rows: 1
+      total: 1
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Still_ArmL
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Still/Still_ArmL/ArmL_texture_01
+      urls:
+      - ArmL_texture_01
+      stride: {x: 80, y: 56}
+      offset: {x: -37, y: 4}
+      cols: 6
+      rows: 1
+      total: 6
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Still_ArmR
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Still/Still_ArmR/ArmR_texture_01
+      urls:
+      - ArmR_texture_01
+      stride: {x: 79, y: 56}
+      offset: {x: -36, y: 4}
+      cols: 6
+      rows: 1
+      total: 6
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Still_Idle
+    stream: 
+    framerate: 24
+    looping: 1
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Still/Still_Idle/Idle_texture_01
+      urls:
+      - Idle_texture_01
+      stride: {x: 80, y: 56}
+      offset: {x: -37, y: 4}
+      cols: 3
+      rows: 1
+      total: 1
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Blink
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Blink/Blink_texture_01
+      urls:
+      - Blink_texture_01
+      stride: {x: 80, y: 52}
+      offset: {x: -37, y: 4}
+      cols: 3
+      rows: 1
+      total: 2
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Leaving
+    stream: 
+    framerate: 24
+    looping: 1
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Leaving/Leaving_texture_01
+      urls:
+      - Leaving_texture_01
+      stride: {x: 80, y: 53}
+      offset: {x: -37, y: 4}
+      cols: 3
+      rows: 1
+      total: 1
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Laugh
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Laugh/Laugh_texture_01
+      urls:
+      - Laugh_texture_01
+      stride: {x: 80, y: 56}
+      offset: {x: -37, y: 4}
+      cols: 12
+      rows: 1
+      total: 11
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Freefall
+    stream: 
+    framerate: 24
+    looping: 1
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Freefall/Freefall_texture_01
+      urls:
+      - Freefall_texture_01
+      stride: {x: 79, y: 69}
+      offset: {x: -36, y: 3}
+      cols: 12
+      rows: 7
+      total: 48
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Hit
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 1
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Hit/Hit_texture_01
+      urls:
+      - Hit_texture_01
+      stride: {x: 89, y: 72}
+      offset: {x: -42, y: 3}
+      cols: 11
+      rows: 3
+      total: 30
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Lose
+    stream: 
+    framerate: 24
+    looping: 1
+    preload: 0
+    clips:
+    - stringTiles:
+      - Texture/Crabby/Lose/Lose_texture_01
+      urls:
+      - Lose_texture_01
+      stride: {x: 76, y: 72}
+      offset: {x: -33, y: 4}
+      cols: 6
+      rows: 1
+      total: 6
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  sharedMaterial: 0
+  zoomInvariant: 0
+--- !u!114 &114767212647468565
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1586221449802760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc35bab39cb2914780ae18659fefbb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultAnimation: 0
+  defaultOnStart: 1
+  manager: {fileID: 0}
+  animations:
+  - name: Ship1
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Ship/Ship1/Ship1_texture_01
+      urls:
+      - Ship1_texture_01
+      stride: {x: 397, y: 189}
+      offset: {x: -196, y: -57}
+      cols: 2
+      rows: 2
+      total: 4
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  sharedMaterial: 0
+  zoomInvariant: 0
+--- !u!114 &114905493283826817
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1771468693483614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07ce3d46c7c4484cb569c9d44d4e8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayOnStart: 0
+  Looping: 0
+  keyframeOffsetInPixels: 1
+  keyframeOffsetInWorldSpace: 1
+  keyframes:
+  - frame: 0
+    offset: {x: 412.35, y: 135.35, z: 0}
+    angle: -15
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 58
+    offset: {x: -1.55, y: 154.64, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 59
+    offset: {x: -1.55, y: 154.64, z: 0}
+    angle: -2
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 60
+    offset: {x: -1.55, y: 154.64, z: 0}
+    angle: -2.8
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 61
+    offset: {x: -1.55, y: 154.64, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 96
+    offset: {x: -1.55, y: 157.65, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 98
+    offset: {x: -1.55, y: 155.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 99
+    offset: {x: -1.55, y: 143.65, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 100
+    offset: {x: -1.55, y: 128.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 101
+    offset: {x: -1.55, y: 111.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 102
+    offset: {x: -1.55, y: 88.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 103
+    offset: {x: -1.55, y: 84.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 104
+    offset: {x: -1.55, y: 80.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 105
+    offset: {x: -1.55, y: 87.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 106
+    offset: {x: -1.55, y: 98.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 107
+    offset: {x: -1.55, y: 110.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 108
+    offset: {x: -1.55, y: 115.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 109
+    offset: {x: -1.55, y: 121.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 110
+    offset: {x: -1.55, y: 123.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 111
+    offset: {x: -1.55, y: 122.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 112
+    offset: {x: -1.55, y: 119.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 165
+    offset: {x: -1.55, y: 119.15, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  - frame: 213
+    offset: {x: 644.8, y: 425.95, z: 0}
+    angle: 0
+    scale: {x: 1, y: 1, z: 1}
+  EaseInEaseOut: 0
+  AffectX: 1
+  AffectY: 1
+  AffectZ: 1
+  AffectOrientation: 1

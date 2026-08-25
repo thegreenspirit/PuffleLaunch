@@ -1,0 +1,287 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1604205376268532}
+  m_IsPrefabParent: 1
+--- !u!1 &1482281980708071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4077091160261315}
+  - component: {fileID: 23946623236710731}
+  - component: {fileID: 33016974041107739}
+  - component: {fileID: 114692470182389071}
+  m_Layer: 0
+  m_Name: ProgressBarShine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1604205376268532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4735399526508738}
+  - component: {fileID: 23622427711556244}
+  - component: {fileID: 33884931453200455}
+  - component: {fileID: 114168121615630701}
+  - component: {fileID: 114198192334733615}
+  m_Layer: 0
+  m_Name: ProgressBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4077091160261315
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1482281980708071}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4735399526508738}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4735399526508738
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1604205376268532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.8288269, y: 0.24946594, z: 9.802246}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4077091160261315}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23622427711556244
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1604205376268532}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!23 &23946623236710731
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1482281980708071}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33016974041107739
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1482281980708071}
+  m_Mesh: {fileID: 0}
+--- !u!33 &33884931453200455
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1604205376268532}
+  m_Mesh: {fileID: 0}
+--- !u!114 &114168121615630701
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1604205376268532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc35bab39cb2914780ae18659fefbb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultAnimation: 0
+  defaultOnStart: 1
+  manager: {fileID: 0}
+  animations:
+  - name: Progression
+    stream: 
+    framerate: 0
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/ProgressBar/Progression/texture
+      urls:
+      - /Textures/ProgressBar/Progression/texture.png
+      stride: {x: 117, y: 151}
+      offset: {x: -56.5, y: -59.5}
+      cols: 4
+      rows: 3
+      total: 12
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Finished
+    stream: 
+    framerate: 24
+    looping: 1
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/ProgressBar/Finished/texture
+      urls:
+      - /Textures/ProgressBar/Finished/texture.png
+      stride: {x: 117, y: 151}
+      offset: {x: -56.5, y: -59.5}
+      cols: 4
+      rows: 3
+      total: 10
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  sharedMaterial: 0
+  zoomInvariant: 1
+--- !u!114 &114198192334733615
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1604205376268532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781c6cab4b418274eb1efd1bf2bf6e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mShine: {fileID: 1482281980708071}
+  mCamera: {fileID: 0}
+  progressText: {fileID: 0}
+--- !u!114 &114692470182389071
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1482281980708071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc35bab39cb2914780ae18659fefbb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultAnimation: 1
+  defaultOnStart: 1
+  manager: {fileID: 0}
+  animations:
+  - name: Shine
+    stream: 
+    framerate: 24
+    looping: 1
+    preload: 1
+    clips:
+    - stringTiles:
+      - Textures/ProgressBar/Shine/texture_01
+      urls:
+      - texture_01
+      stride: {x: 117, y: 151}
+      offset: {x: -56.5, y: -59.5}
+      cols: 8
+      rows: 6
+      total: 30
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: EmptyAnim
+    stream: 
+    framerate: 0
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/EmptyAnim/EmptyAnim_texture_00
+      urls:
+      - EmptyAnim_texture_00
+      stride: {x: 117, y: 151}
+      offset: {x: -56.5, y: -59.5}
+      cols: 2
+      rows: 1
+      total: 1
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  sharedMaterial: 0
+  zoomInvariant: 0

@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: bba144e6ce32abd43bb9e80dc45d1dd7
+timeCreated: 1787477991
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 26
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: cpwonderboy
+  fontNames:
+  - cpwonderboy
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 27dfbc20131037e4d92712beec92e306, type: 3}
+  - {fileID: 12800000, guid: 2c40dadae16212740acc22e6f46512b3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

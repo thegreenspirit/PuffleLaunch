@@ -1,0 +1,618 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1324995571300456}
+  m_IsPrefabParent: 1
+--- !u!1 &1323826556832209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4070544941005950}
+  - component: {fileID: 33949213324053815}
+  - component: {fileID: 23041011054836644}
+  - component: {fileID: 114906651705286727}
+  - component: {fileID: 114397604856240649}
+  m_Layer: 9
+  m_Name: Crabby
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1324995571300456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4966867977928652}
+  - component: {fileID: 23281171964997081}
+  - component: {fileID: 33253969329855637}
+  - component: {fileID: 114976731007538169}
+  - component: {fileID: 114212889422205326}
+  - component: {fileID: 135376157351512195}
+  - component: {fileID: 54765339143698037}
+  - component: {fileID: 114160047146224219}
+  - component: {fileID: 114611723706188162}
+  - component: {fileID: 82945095110098527}
+  m_Layer: 9
+  m_Name: BossOne
+  m_TagString: Boss
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4070544941005950
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323826556832209}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4966867977928652}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4966867977928652
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324995571300456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4070544941005950}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23041011054836644
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323826556832209}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 28e3303cdeec5c14eb71e49b0b088ab4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!23 &23281171964997081
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324995571300456}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 28e3303cdeec5c14eb71e49b0b088ab4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33253969329855637
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324995571300456}
+  m_Mesh: {fileID: 0}
+--- !u!33 &33949213324053815
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323826556832209}
+  m_Mesh: {fileID: 0}
+--- !u!54 &54765339143698037
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324995571300456}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!82 &82945095110098527
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324995571300456}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e0fb425fe5a8df047963e12bd9fcda87, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &114160047146224219
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324995571300456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f9be4635517504e80ef4abec8e5a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnGiantPuffleO: 1
+  hitFX: {fileID: 1567053278463269, guid: 65296268bddae424d81f2e54a60120c9, type: 2}
+  impactSound: {fileID: 8300000, guid: b0fb30e9ccec3a44aa89fb145a6afe9b, type: 3}
+  explosionSound: {fileID: 8300000, guid: 881dd6637c113e642938bdd697d1ba32, type: 3}
+--- !u!114 &114212889422205326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324995571300456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5c61c835cf90f43a214e4091ce791b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elasticMultiplier: 0.003
+  friction: 0.1
+  restoreElasticity: 0
+--- !u!114 &114397604856240649
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323826556832209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e87662aebcbfd234ab5769b82b50a28e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reachingIdle: 0
+--- !u!114 &114611723706188162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324995571300456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46557ab3a617d24396ccdb1ad7845ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114906651705286727
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323826556832209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc35bab39cb2914780ae18659fefbb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultAnimation: 2
+  defaultOnStart: 1
+  manager: {fileID: 0}
+  animations:
+  - name: Reaching_ArmR
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Reaching/Reaching_ArmR/ArmR_Texture_01
+      urls:
+      - ArmR_texture_01
+      stride: {x: 81, y: 53}
+      offset: {x: -38, y: 4}
+      cols: 12
+      rows: 2
+      total: 13
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Reaching_ArmL
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Reaching/Reaching_ArmL/ArmL_Texture_01
+      urls:
+      - ArmL_texture_01
+      stride: {x: 81, y: 55}
+      offset: {x: -37, y: 2}
+      cols: 12
+      rows: 1
+      total: 7
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Reaching_Idle
+    stream: 
+    framerate: 24
+    looping: 1
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Reaching/Reaching_Idle/Still_texture_01
+      urls:
+      - Still_texture_01
+      stride: {x: 80, y: 53}
+      offset: {x: -37, y: 4}
+      cols: 3
+      rows: 1
+      total: 1
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Still_ArmL
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Still/Still_ArmL/ArmL_texture_01
+      urls:
+      - ArmL_texture_01
+      stride: {x: 80, y: 56}
+      offset: {x: -37, y: 4}
+      cols: 6
+      rows: 1
+      total: 6
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Still_ArmR
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Still/Still_ArmR/ArmR_texture_01
+      urls:
+      - ArmR_texture_01
+      stride: {x: 79, y: 56}
+      offset: {x: -36, y: 4}
+      cols: 6
+      rows: 1
+      total: 6
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Still_Idle
+    stream: 
+    framerate: 24
+    looping: 1
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Still/Still_Idle/Idle_texture_01
+      urls:
+      - Idle_texture_01
+      stride: {x: 80, y: 56}
+      offset: {x: -37, y: 4}
+      cols: 3
+      rows: 1
+      total: 1
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Blink
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Blink/Blink_texture_01
+      urls:
+      - Blink_texture_01
+      stride: {x: 80, y: 52}
+      offset: {x: -37, y: 4}
+      cols: 3
+      rows: 1
+      total: 2
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Leaving
+    stream: 
+    framerate: 24
+    looping: 1
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Leaving/Leaving_texture_01
+      urls:
+      - Leaving_texture_01
+      stride: {x: 80, y: 53}
+      offset: {x: -37, y: 4}
+      cols: 3
+      rows: 1
+      total: 1
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Laugh
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Laugh/Laugh_texture_01
+      urls:
+      - Laugh_texture_01
+      stride: {x: 80, y: 56}
+      offset: {x: -37, y: 4}
+      cols: 12
+      rows: 1
+      total: 11
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Freefall
+    stream: 
+    framerate: 24
+    looping: 1
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Freefall/Freefall_texture_01
+      urls:
+      - Freefall_texture_01
+      stride: {x: 79, y: 69}
+      offset: {x: -36, y: 3}
+      cols: 12
+      rows: 7
+      total: 48
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Hit
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 1
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Hit/Hit_texture_01
+      urls:
+      - Hit_texture_01
+      stride: {x: 89, y: 72}
+      offset: {x: -42, y: 3}
+      cols: 11
+      rows: 3
+      total: 30
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  - name: Lose
+    stream: 
+    framerate: 24
+    looping: 1
+    preload: 1
+    clips:
+    - stringTiles:
+      - Textures/Crabby/Lose/Lose_texture_01
+      urls:
+      - Lose_texture_01
+      stride: {x: 76, y: 72}
+      offset: {x: -33, y: 4}
+      cols: 6
+      rows: 1
+      total: 6
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  sharedMaterial: 0
+  zoomInvariant: 0
+--- !u!114 &114976731007538169
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324995571300456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc35bab39cb2914780ae18659fefbb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultAnimation: 0
+  defaultOnStart: 1
+  manager: {fileID: 0}
+  animations:
+  - name: Ship1
+    stream: 
+    framerate: 24
+    looping: 0
+    preload: 0
+    clips:
+    - stringTiles:
+      - Textures/Ship/Ship1/Ship1_texture_01
+      urls:
+      - Ship1_texture_01
+      stride: {x: 397, y: 189}
+      offset: {x: -196, y: -57}
+      cols: 2
+      rows: 2
+      total: 4
+      useHighRes: 0
+    extra:
+      background: 0
+      frames: 
+      sprite: {fileID: 0}
+  sharedMaterial: 0
+  zoomInvariant: 0
+--- !u!135 &135376157351512195
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324995571300456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 50
+  m_Center: {x: 0, y: 0, z: 0}

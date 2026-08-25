@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: b7d810aa89269e044bb80ff2624c33c2
+timeCreated: 1787474871
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 17
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Burbank Small
+  fontNames:
+  - Burbank Small
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 32df341236285804a8b3fb5062634cc5, type: 3}
+  - {fileID: 12800000, guid: da8805d675d6a0d47b3a3ee489af4bd2, type: 3}
+  - {fileID: 12800000, guid: ad28d89777a230443b9262303426838e, type: 3}
+  - {fileID: 12800000, guid: fc3f81d7e0566e641b736332943a5502, type: 3}
+  - {fileID: 12800000, guid: ab345ce9abec5a4488f1cbaea04bfc00, type: 3}
+  - {fileID: 12800000, guid: bebd4e6db9487d84388def3f33f73271, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
