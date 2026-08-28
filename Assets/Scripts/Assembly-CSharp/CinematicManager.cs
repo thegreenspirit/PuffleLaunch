@@ -28,7 +28,10 @@ public class CinematicManager : MonoBehaviour
 	{
 		public string movieURL = string.Empty;
 		public CinematicManager.MovieType movieType = CinematicManager.MovieType.eUnknown;
-		//public FullScreenMovieControlMode movieControlMode;
+
+#if UNITY_ANDROID || UNITY_IOS
+		public FullScreenMovieControlMode movieControlMode;
+#endif
 
 		public CinematicData(string aMovieURL)
 		{
@@ -88,11 +91,15 @@ public class CinematicManager : MonoBehaviour
 	private void Awake()
 	{
 		CinematicManager.m_cInstance = this;
+
 		this.CreateCinematicList();
+
 		this.m_FullscreenBgObj = global::UnityEngine.Object.Instantiate(Resources.Load("Prefabs/GUI/FullscreenBG", typeof(GameObject))) as GameObject;
 		Utilities.AssertMsg(this.m_FullscreenBgObj != null, "Fail to instantiate FullscreenBG from prefab!");
+
 		this.m_FullscreenBgMesh = this.m_FullscreenBgObj.GetComponent<MeshRenderer>();
 		Utilities.AssertMsg(this.m_FullscreenBgObj != null, "Fail to get MeshRenderer component from FullscreenBG object!");
+
 		if (this.m_FullscreenBgMesh != null)
 		{
 			this.m_FullscreenBgMesh.enabled = false;
@@ -103,22 +110,22 @@ public class CinematicManager : MonoBehaviour
 	{
 		switch (this.m_MovieState)
 		{
-		case CinematicManager.MovieState.eReadyToPlay:
-			this.PlayMovie(this.m_CurrentMovieData);
-			break;
-		case CinematicManager.MovieState.ePlaySucceeded:
-			this.ChangeMovieState(CinematicManager.MovieState.eIdle);
-			break;
-		case CinematicManager.MovieState.ePlayFailed:
-			if (this.m_CurrentMovieData != null && this.m_CurrentMovieData.HasPlayFailedHandler())
-			{
-				this.m_CurrentMovieData.OnPlayFailed();
-			}
-			else
-			{
+			case CinematicManager.MovieState.eReadyToPlay:
+				this.PlayMovie(this.m_CurrentMovieData);
+				break;
+			case CinematicManager.MovieState.ePlaySucceeded:
 				this.ChangeMovieState(CinematicManager.MovieState.eIdle);
-			}
-			break;
+				break;
+			case CinematicManager.MovieState.ePlayFailed:
+				if (this.m_CurrentMovieData != null && this.m_CurrentMovieData.HasPlayFailedHandler())
+				{
+					this.m_CurrentMovieData.OnPlayFailed();
+				}
+				else
+				{
+					this.ChangeMovieState(CinematicManager.MovieState.eIdle);
+				}
+				break;
 		}
 	}
 
@@ -145,11 +152,12 @@ public class CinematicManager : MonoBehaviour
 
 	private void CreateCinematicList()
 	{
-		this.m_CinematicList[CinematicManager.MovieId.eIntro] = new CinematicManager.CinematicData(kIntroMovieURL)
-		{
-			// Green Spirit: changed CancelOnTouch
-			//movieControlMode = FullScreenMovieControlMode.CancelOnInput
-		};
+#if UNITY_ANDROID || UNITY_IOS
+		// Green Spirit: changed CancelOnTouch
+		this.m_CinematicList[CinematicManager.MovieId.eIntro] = new CinematicManager.CinematicData(kIntroMovieURL) { movieControlMode = FullScreenMovieControlMode.CancelOnInput };
+#else
+		this.m_CinematicList[CinematicManager.MovieId.eIntro] = new CinematicManager.CinematicData(kIntroMovieURL) {};
+#endif
 
 		string text = string.Empty;
 		string languageCode = LocalizationManager.GetLanguageCode();
@@ -210,12 +218,12 @@ public class CinematicManager : MonoBehaviour
 
 	private void PlayMovie(CinematicManager.CinematicData aCineData)
 	{
-		if (aCineData == null || !aCineData.IsValid())
-		{
-			return;
-		}
+		if (aCineData == null || !aCineData.IsValid()) return;
+
 		AudioManager.Instance.Mute();
 		CinematicManager.MovieType movieType = this.m_CurrentMovieData.movieType;
+
+#if UNITY_ANDROID || UNITY_IOS
 		if (movieType != CinematicManager.MovieType.eNetwork)
 		{
 			if (movieType != CinematicManager.MovieType.eLocal)
@@ -224,19 +232,23 @@ public class CinematicManager : MonoBehaviour
 			}
 			else
 			{
-				//Handheld.PlayFullScreenMovie(this.m_CurrentMovieData.movieURL, Color.black, this.m_CurrentMovieData.movieControlMode, FullScreenMovieScalingMode.AspectFit);
+				Handheld.PlayFullScreenMovie(this.m_CurrentMovieData.movieURL, Color.black, this.m_CurrentMovieData.movieControlMode, FullScreenMovieScalingMode.AspectFit);
 				this.ChangeMovieState(CinematicManager.MovieState.ePlaySucceeded);
 			}
 		}
 		else if (this.IsNetworkReachable())
 		{
-			//Handheld.PlayFullScreenMovie(this.m_CurrentMovieData.movieURL, Color.black, this.m_CurrentMovieData.movieControlMode, FullScreenMovieScalingMode.AspectFit);
+			Handheld.PlayFullScreenMovie(this.m_CurrentMovieData.movieURL, Color.black, this.m_CurrentMovieData.movieControlMode, FullScreenMovieScalingMode.AspectFit);
 			this.ChangeMovieState(CinematicManager.MovieState.ePlaySucceeded);
 		}
 		else
 		{
 			this.ChangeMovieState(CinematicManager.MovieState.ePlayFailed);
 		}
+#else
+		// Green Spirit: if someone can figure out how to play a video here on Standalone/Editor I would appreciate that
+		this.ChangeMovieState(CinematicManager.MovieState.ePlayFailed);
+#endif
 	}
 
 	private void ChangeMovieState(CinematicManager.MovieState aNewState)
