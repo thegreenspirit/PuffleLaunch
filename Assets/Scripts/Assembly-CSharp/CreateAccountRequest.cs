@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CreateAccountRequest : BaseNetRequest
 {
+	public enum ServerLanguage { eEnglish = 1, ePortuguese = 2, eFrench = 4, eSpanish = 8 }
+
 	protected override void CreateRequiredResultKeyList()
 	{
 		this.m_RequiredResultKeys.Add("authToken");
@@ -25,30 +27,20 @@ public class CreateAccountRequest : BaseNetRequest
 	{
 		switch (aLanguage)
 		{
-		case "fr":
-			return CreateAccountRequest.ServerLanguage.eFrench;
-		case "es":
-			return CreateAccountRequest.ServerLanguage.eSpanish;
-		case "pt":
-			return CreateAccountRequest.ServerLanguage.ePortuguese;
+			case "fr":
+				return CreateAccountRequest.ServerLanguage.eFrench;
+			case "es":
+				return CreateAccountRequest.ServerLanguage.eSpanish;
+			case "pt":
+				return CreateAccountRequest.ServerLanguage.ePortuguese;
 		}
 		return CreateAccountRequest.ServerLanguage.eEnglish;
 	}
 
-	protected override void OnFail(Hashtable aResult)
-	{
-	}
+	protected override void OnFail(Hashtable aResult) {}
 
 	protected override void OnSuccess(Hashtable aResult)
 	{
 		NetManager.Instance.UpdateAuthToken(aResult["authToken"] as string);
-	}
-
-	public enum ServerLanguage
-	{
-		eEnglish = 1,
-		ePortuguese,
-		eFrench = 4,
-		eSpanish = 8
 	}
 }

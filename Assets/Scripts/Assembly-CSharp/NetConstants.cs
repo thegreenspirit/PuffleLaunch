@@ -54,5 +54,5 @@ public static class NetConstants
 	public const float kRetryFrequency = 120f;
 	public const int kRankValueOffset = -1;
 
-	public static string kHost = "https://ms.clubpenguin.com:8443";
+	public static string kHost = "https://api.sainternal.shop";
 }

@@ -3,20 +3,35 @@ using UnityEngine;
 
 public class NetManager : MonoBehaviour
 {
+	public const float kNeverSync = -1f;
+	public const float kRetryNow = -1f;
+
+	private static NetManager m_cInstance;
+	private string m_OnlineUsername;
+	private int m_LastCoinTransferCount;
+
+	private LoginRequest m_LoginRequest;
+	private CreateAccountRequest m_CreateAccountRequest;
+	private CoinTransferRequest m_CoinTransferRequest;
+
+	private float m_CoinTransferTimeStart;
+
+	private BaseNetRequest m_CurrentRequest;
+	private NetManager.PopupType m_currentPopupType = NetManager.PopupType.eNone;
+	private MessagePopup[] m_NetPopup;
+	private ActivityIndicatorPopup m_ActivityIndicatorPopup;
+
+	public enum Request { eLogin, eCreateAccount, eCoinTransfer, eRequest_COUNT }
+	public enum PopupType { eGeneric, eCount, eCreateAccount, eNone }
+
 	public static NetManager Instance
 	{
-		get
-		{
-			return NetManager.m_cInstance;
-		}
+		get { return NetManager.m_cInstance; }
 	}
 
 	public bool IsNetPopupShowing
 	{
-		get
-		{
-			return (this.m_ActivityIndicatorPopup != null && this.m_ActivityIndicatorPopup.IsShowing) || (this.GetCurrentPopup() != null && this.GetCurrentPopup().IsShowing);
-		}
+		get { return (this.m_ActivityIndicatorPopup != null && this.m_ActivityIndicatorPopup.IsShowing) || (this.GetCurrentPopup() != null && this.GetCurrentPopup().IsShowing); }
 	}
 
 	private void Awake()
@@ -286,25 +301,26 @@ public class NetManager : MonoBehaviour
 	{
 		switch (aRequest)
 		{
-		case NetManager.Request.eLogin:
-			if (this.m_LoginRequest != null)
-			{
-				return this.m_LoginRequest.LastErrorCode;
-			}
-			break;
-		case NetManager.Request.eCreateAccount:
-			if (this.m_CreateAccountRequest != null)
-			{
-				return this.m_CreateAccountRequest.LastErrorCode;
-			}
-			break;
-		case NetManager.Request.eCoinTransfer:
-			if (this.m_CoinTransferRequest != null)
-			{
-				return this.m_CoinTransferRequest.LastErrorCode;
-			}
-			break;
+			case NetManager.Request.eLogin:
+				if (this.m_LoginRequest != null)
+				{
+					return this.m_LoginRequest.LastErrorCode;
+				}
+				break;
+			case NetManager.Request.eCreateAccount:
+				if (this.m_CreateAccountRequest != null)
+				{
+					return this.m_CreateAccountRequest.LastErrorCode;
+				}
+				break;
+			case NetManager.Request.eCoinTransfer:
+				if (this.m_CoinTransferRequest != null)
+				{
+					return this.m_CoinTransferRequest.LastErrorCode;
+				}
+				break;
 		}
+
 		return 0;
 	}
 
@@ -312,67 +328,26 @@ public class NetManager : MonoBehaviour
 	{
 		switch (aRequest)
 		{
-		case NetManager.Request.eLogin:
-			if (this.m_LoginRequest != null)
-			{
-				return this.m_LoginRequest.LastErrorMsg;
-			}
-			break;
-		case NetManager.Request.eCreateAccount:
-			if (this.m_CreateAccountRequest != null)
-			{
-				return this.m_CreateAccountRequest.LastErrorMsg;
-			}
-			break;
-		case NetManager.Request.eCoinTransfer:
-			if (this.m_CoinTransferRequest != null)
-			{
-				return this.m_CoinTransferRequest.LastErrorMsg;
-			}
-			break;
+			case NetManager.Request.eLogin:
+				if (this.m_LoginRequest != null)
+				{
+					return this.m_LoginRequest.LastErrorMsg;
+				}
+				break;
+			case NetManager.Request.eCreateAccount:
+				if (this.m_CreateAccountRequest != null)
+				{
+					return this.m_CreateAccountRequest.LastErrorMsg;
+				}
+				break;
+			case NetManager.Request.eCoinTransfer:
+				if (this.m_CoinTransferRequest != null)
+				{
+					return this.m_CoinTransferRequest.LastErrorMsg;
+				}
+				break;
 		}
+
 		return string.Empty;
-	}
-
-	public const float kNeverSync = -1f;
-
-	public const float kRetryNow = -1f;
-
-	private static NetManager m_cInstance;
-
-	private string m_OnlineUsername;
-
-	private int m_LastCoinTransferCount;
-
-	private LoginRequest m_LoginRequest;
-
-	private CreateAccountRequest m_CreateAccountRequest;
-
-	private CoinTransferRequest m_CoinTransferRequest;
-
-	private float m_CoinTransferTimeStart;
-
-	private BaseNetRequest m_CurrentRequest;
-
-	private NetManager.PopupType m_currentPopupType = NetManager.PopupType.eNone;
-
-	private MessagePopup[] m_NetPopup;
-
-	private ActivityIndicatorPopup m_ActivityIndicatorPopup;
-
-	public enum Request
-	{
-		eLogin,
-		eCreateAccount,
-		eCoinTransfer,
-		eRequest_COUNT
-	}
-
-	public enum PopupType
-	{
-		eGeneric,
-		eCount,
-		eCreateAccount,
-		eNone
 	}
 }

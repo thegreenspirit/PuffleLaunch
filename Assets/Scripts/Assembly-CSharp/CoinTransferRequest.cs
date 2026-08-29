@@ -3,13 +3,8 @@ using System.Collections;
 
 public class CoinTransferRequest : BaseNetRequest
 {
-	protected override void Init()
-	{
-	}
-
-	protected override void CreateRequiredResultKeyList()
-	{
-	}
+	protected override void Init() {}
+	protected override void CreateRequiredResultKeyList() {}
 
 	public BaseNetRequest.Message BuildRequestMessage(string aAuthToken, int aNumCoins)
 	{
