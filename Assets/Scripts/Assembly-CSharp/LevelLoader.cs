@@ -178,10 +178,7 @@ public class LevelLoader : MonoBehaviour
 
 	public static LevelLoader Instance
 	{
-		get
-		{
-			return LevelLoader.mSingleton;
-		}
+		get { return LevelLoader.mSingleton; }
 	}
 
 	private bool ParseBackground(ref StringReader aReader, float aZOffset)
@@ -240,15 +237,10 @@ public class LevelLoader : MonoBehaviour
 					this.mCeilingHeight = CannonGameObject.transform.position.y;
 				}
 			}
-			else
-			{
-				Debug.LogWarning(string.Format("Cannon variant not set: {0}", num));
-			}
+			else Debug.LogWarning(string.Format("Cannon variant not set: {0}", num));
 		}
-		else
-		{
-			Debug.LogWarning(string.Format("Cannon index out of range: {0}", num));
-		}
+		else Debug.LogWarning(string.Format("Cannon index out of range: {0}", num));
+
 		return true;
 	}
 
@@ -267,7 +259,7 @@ public class LevelLoader : MonoBehaviour
 			if (transform)
 			{
 				Transform transform2 = (Transform)global::UnityEngine.Object.Instantiate(transform);
-				transform2.gameObject.SetActive(true); // Green Spirit: This was not here for some reason
+				transform2.gameObject.SetActiveRecursively(true); // Green Spirit: This was not here for some reason
 				transform2.transform.position = new Vector3(float.Parse(array[1]) * ScaleItem.Instance.LevelScale, -float.Parse(array[2]) * ScaleItem.Instance.LevelScale, 0f);
 				transform2.transform.eulerAngles = new Vector3(0f, 0f, -float.Parse(array[3]));
 				ScaleItem.Instance.ScaleLevelItem(transform2, float.Parse(array[4]), float.Parse(array[5]), false);
@@ -276,15 +268,10 @@ public class LevelLoader : MonoBehaviour
 					this.mCeilingHeight = transform2.position.y;
 				}
 			}
-			else
-			{
-				Debug.LogWarning(string.Format("Obstacle variant not set: {0}", num));
-			}
+			else Debug.LogWarning(string.Format("Obstacle variant not set: {0}", num));
 		}
-		else
-		{
-			Debug.LogWarning(string.Format("Obstacle index out of range: {0}", num));
-		}
+		else Debug.LogWarning(string.Format("Obstacle index out of range: {0}", num));
+
 		return true;
 	}
 
@@ -309,10 +296,7 @@ public class LevelLoader : MonoBehaviour
 
 	public int NumPuffleOs
 	{
-		get
-		{
-			return this.mNumPuffleOs;
-		}
+		get { return this.mNumPuffleOs; }
 	}
 
 	private const float chunkPercentage = 0.2f;
