@@ -213,6 +213,7 @@ public class NetManager : MonoBehaviour
 				}
 				num = i;
 			}
+
 			BizIntel.ContextualEvent contextualEvent = new BizIntel.ContextualEvent("coin-transfer");
 			contextualEvent.AddContextItem("player-id", ProfileManager.Instance.CurrentProfile.ProfileName);
 			contextualEvent.AddContextItem("coin-count", this.m_LastCoinTransferCount);

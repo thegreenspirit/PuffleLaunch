@@ -45,13 +45,18 @@ public class GameFlowManager : MonoBehaviour
 	private void Awake()
 	{
 		BizIntel.StartBizIntel();
+
 		if (ResolutionManager.Instance.AssetResolution == ResolutionManager.eAssetResolution.eLowres)
 		{
 			QualitySettings.currentLevel = QualityLevel.Fastest;
 		}
+
 		GameFlowManager.m_cInstance = this;
+
 		this.m_InputController = base.GetComponent<InputController>();
+
 		global::UnityEngine.Object.DontDestroyOnLoad(GameFlowManager.m_cInstance);
+
 		this.mAudioManager = base.GetComponent<AudioManager>();
 	}
 
@@ -60,8 +65,7 @@ public class GameFlowManager : MonoBehaviour
 		this.m_MenuClick24 = Resources.Load("Sounds/UI/Menu_Click24", typeof(AudioClip)) as AudioClip;
 		global::UnityEngine.Object.DontDestroyOnLoad(this.m_MenuClick24);
 
-#if UNITY_ANDROID || UNITY_IOS
-		// Green Spirit: Android shit
+#if UNITY_ANDROID
 		base.gameObject.name = base.GetType().ToString();
 		AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 		AndroidJavaObject @static = androidJavaClass.GetStatic<AndroidJavaObject>("currentActivity");
@@ -109,6 +113,7 @@ public class GameFlowManager : MonoBehaviour
 			global::UnityEngine.Object.DestroyImmediate(this.m_GUIManager.gameObject);
 			this.m_GUIManager = null;
 		}
+
 		BizIntel.StopBizIntel();
 	}
 

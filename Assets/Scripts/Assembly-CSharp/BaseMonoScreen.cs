@@ -87,10 +87,7 @@ public abstract class BaseMonoScreen : MonoBehaviour
 			if (GameFlowManager.Instance.m_DoWindowBack)
 			{
 #if UNITY_ANDROID || UNITY_IOS
-				if (!TouchScreenKeyboard.visible)
-				{
-					this.OnBack();
-				}
+				if (!TouchScreenKeyboard.visible) this.OnBack();
 #endif
 				GameFlowManager.Instance.m_DoWindowBack = false;
 			}

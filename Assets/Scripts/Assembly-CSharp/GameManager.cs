@@ -75,8 +75,7 @@ public class GameManager : MonoBehaviour
 		this.mte_unlockFlags = new bool[5];
 		this.ResetUnlockFlags();
 
-#if UNITY_ANDROID || UNITY_IOS
-		// Green Spirit: Android shit
+#if UNITY_ANDROID && UNITY_EDITOR
 		AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 		base.gameObject.name = base.GetType().ToString();
 		AndroidJavaObject @static = androidJavaClass.GetStatic<AndroidJavaObject>("currentActivity");
@@ -108,7 +107,7 @@ public class GameManager : MonoBehaviour
 
 	private void Update()
 	{
-#if UNITY_ANDROID || UNITY_IOS
+#if UNITY_ANDROID && UNITY_EDITOR
 		this.CheckAndroidBackButton();
 #endif
 		if (this.m_Paused)
@@ -124,7 +123,7 @@ public class GameManager : MonoBehaviour
 
 	private void OnDestroy() {}
 
-#if UNITY_ANDROID || UNITY_IOS
+#if UNITY_ANDROID && UNITY_EDITOR
 	public void HeadphoneMsg(string msg)
 	{
 		if (msg == this.m_HeadPhonesUnplugged && !this.m_Paused && this.m_IsInLevel)
@@ -569,6 +568,7 @@ public class GameManager : MonoBehaviour
 		this.m_EnableTiming = false;
 		TimeManager.Instance.SlowmoOverride = false;
 		TimeManager.Instance.StopSlowmo();
+
 		BizIntel.ContextualEvent contextualEvent = new BizIntel.ContextualEvent("play-level");
 		contextualEvent.AddContextItem("level-id", (int)GameManager.smCurrentLevel);
 		contextualEvent.AddContextItem("elapsed-time", (int)Time.timeSinceLevelLoad);
@@ -577,6 +577,7 @@ public class GameManager : MonoBehaviour
 		contextualEvent.AddContextItem("level-passed", aLevelComplete);
 		contextualEvent.AddContextItem("number-deaths", Puffle.Instance.respawnCount);
 		contextualEvent.Log();
+
 		GameFlowManager.Instance.GUIManager.LoadingScreen.TextureData[0].icon.image = GUIUtil.LoadTexture2D("GUI/LoadingScreen/BlackScreen");
 		Resources.UnloadUnusedAssets();
 	}
@@ -724,7 +725,7 @@ public class GameManager : MonoBehaviour
 
 	private bool m_IsInLevel;
 
-#if UNITY_ANDROID || UNITY_IOS
+#if UNITY_ANDROID && UNITY_EDITOR
 	private string m_HeadPhonesPlugged = "Headphones are Plugged";
 	private string m_HeadPhonesUnplugged = "Headphones are not Plugged";
 	private AndroidJavaObject m_Headphones;

@@ -4,60 +4,26 @@ using UnityEngine;
 
 public static class BizIntel
 {
-	private static void LogSimpleEvent(string eventDescription)
-	{
-		if (Application.isEditor)
-		{
-			return;
-		}
-	}
-
-	public static void StartBizIntel()
-	{
-		if (Application.isEditor)
-		{
-			return;
-		}
-
-#if UNITY_ANDROID || UNITY_IOS
-		AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-		AndroidJavaObject @static = androidJavaClass.GetStatic<AndroidJavaObject>("currentActivity");
-		if (@static != null)
-		{
-			AndroidJavaObject androidJavaObject = @static.Call<AndroidJavaObject>("getApplication", new object[0]);
-			if (androidJavaObject != null)
-			{
-				BizIntel.m_appMeasurement = new AndroidJavaObject("com.omniture.AppMeasurement", new object[] { androidJavaObject });
-				if (BizIntel.m_appMeasurement != null)
-				{
-					BizIntel.m_appMeasurement.Set<string>("account", "wdgwdolcppuffleandroid");
-					BizIntel.m_appMeasurement.Set<string>("pageName", string.Empty);
-					BizIntel.m_appMeasurement.Set<string>("pageURL", string.Empty);
-					BizIntel.m_appMeasurement.Set<string>("currencyCode", "USD");
-					BizIntel.m_appMeasurement.Set<string>("trackingServer", "mdisney.112.2o7.net");
-				}
-			}
-		}
-#endif
-	}
-
-	public static void StopBizIntel()
-	{
-		if (Application.isEditor)
-		{
-			return;
-		}
-		if (BizIntel.m_appMeasurement != null)
-		{
-			BizIntel.m_appMeasurement.Dispose();
-			BizIntel.m_appMeasurement = null;
-		}
-	}
-
 	private static AndroidJavaObject m_appMeasurement;
 
 	public class ContextualEvent
 	{
+		private string m_Scope;
+
+		private List<BizIntel.ContextualEvent.KeyValue> m_Context;
+
+		private class KeyValue
+		{
+			public string m_Key;
+			public string m_Value;
+
+			public KeyValue(string aKey, string aValue)
+			{
+				this.m_Key = aKey;
+				this.m_Value = aValue;
+			}
+		}
+
 		public ContextualEvent(string aScope)
 		{
 			this.m_Scope = aScope;
@@ -85,10 +51,8 @@ public static class BizIntel
 
 		public void Log()
 		{
-			if (Application.isEditor)
-			{
-				return;
-			}
+			if (Application.isEditor) return;
+
 			if (BizIntel.m_appMeasurement != null)
 			{
 				BizIntel.m_appMeasurement.Call("clearVars", new object[0]);
@@ -109,22 +73,48 @@ public static class BizIntel
 				BizIntel.m_appMeasurement.Call<string>("track", new object[0]);
 			}
 		}
+	}
 
-		private string m_Scope;
+	private static void LogSimpleEvent(string eventDescription)
+	{
+		if (Application.isEditor) return;
+	}
 
-		private List<BizIntel.ContextualEvent.KeyValue> m_Context;
+	public static void StartBizIntel()
+	{
+		if (Application.isEditor) return;
 
-		private class KeyValue
+#if UNITY_ANDROID
+		AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+		AndroidJavaObject @static = androidJavaClass.GetStatic<AndroidJavaObject>("currentActivity");
+		if (@static != null)
 		{
-			public KeyValue(string aKey, string aValue)
+			AndroidJavaObject androidJavaObject = @static.Call<AndroidJavaObject>("getApplication", new object[0]);
+			if (androidJavaObject != null)
 			{
-				this.m_Key = aKey;
-				this.m_Value = aValue;
+				// Green Spirit: this kills the game sorry adobe
+				/*BizIntel.m_appMeasurement = new AndroidJavaObject("com.omniture.AppMeasurement", new object[] { androidJavaObject });
+				if (BizIntel.m_appMeasurement != null)
+				{
+					BizIntel.m_appMeasurement.Set<string>("account", "wdgwdolcppuffleandroid");
+					BizIntel.m_appMeasurement.Set<string>("pageName", string.Empty);
+					BizIntel.m_appMeasurement.Set<string>("pageURL", string.Empty);
+					BizIntel.m_appMeasurement.Set<string>("currencyCode", "USD");
+					BizIntel.m_appMeasurement.Set<string>("trackingServer", "mdisney.112.2o7.net");
+				}*/
 			}
+		}
+#endif
+	}
 
-			public string m_Key;
+	public static void StopBizIntel()
+	{
+		if (Application.isEditor) return;
 
-			public string m_Value;
+		if (BizIntel.m_appMeasurement != null)
+		{
+			BizIntel.m_appMeasurement.Dispose();
+			BizIntel.m_appMeasurement = null;
 		}
 	}
 }

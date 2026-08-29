@@ -91,19 +91,16 @@ public class LocalizationManager
 
 	public static string GetRegionCode()
 	{
-#if UNITY_ANDROID || UNITY_IOS
-		// Green Spirit: Android shit, fixed this up and changed how this works
+
+#if UNITY_ANDROID
+		// Green Spirit: fixed this up and changed how this works
 		try
 		{
 			using (AndroidJavaClass localeClass = new AndroidJavaClass("java.util.Locale"))
 			using (AndroidJavaObject defaultLocale = localeClass.CallStatic<AndroidJavaObject>("getDefault"))
 			{
 				string country = defaultLocale.Call<string>("getCountry");
-
-				if (country == "AR")
-				{
-					return "es_AR";
-				}
+				if (country == "AR") return "es_AR";
 			}
 		}
 		catch (System.Exception ex)
@@ -111,6 +108,7 @@ public class LocalizationManager
 			Debug.LogError("Failed to fetch Android region code: " + ex.Message);
 		}
 #endif
+
 		return string.Empty;
 	}
 

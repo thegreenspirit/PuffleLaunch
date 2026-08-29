@@ -310,10 +310,12 @@ public class AboutCP : BaseMonoScreen
 	private void OnDestroy()
 	{
 		string text = "Player Not Logged In";
+
 		if (ProfileManager.Instance != null && ProfileManager.Instance.CurrentProfile != null && ProfileManager.Instance.CurrentProfile.ProfileName != null)
 		{
 			text = ProfileManager.Instance.CurrentProfile.ProfileName;
 		}
+
 		BizIntel.ContextualEvent contextualEvent = new BizIntel.ContextualEvent("view-aboutcp");
 		contextualEvent.AddContextItem("player-id", text);
 		contextualEvent.AddContextItem("elapsed-time", (int)Time.timeSinceLevelLoad);
